@@ -50,6 +50,7 @@ exports.HTMLWebpackConfig = {
     plugins: [
         new HtmlWebpackPlugin({
             title: "Snake",
+            template: "src/index.html"
         }),
     ]
 };
