@@ -1,11 +1,12 @@
 function buildInitialState() {
     let initialBoardState = [];
-    for (let x = 0; i < 9; i++) {
+    for (let x = 0; x < 9; x++) {
         let row = [];
-        for (let y = 0; j < 9; j++) {
+        for (let y = 0; y < 9; y++) {
             row.push({
                 x,
-                y
+                y,
+                inSnake: false
             })
         }
         initialBoardState.push(row);
