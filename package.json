@@ -8,7 +8,7 @@
     "test": "jest",
     "coverage": "jest --coverage",
     "start": "webpack-dashboard -- webpack-dev-server --hot --env development",
-    "debug": "webpack-dashboard -- webpack-dev-server --hot --quiet --env development",
+    "debug": "webpack-dev-server --hot --quiet --env development",
     "build": "webpack --env production"
   },
   "keywords": [
@@ -21,6 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.4.9",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.0",
@@ -38,5 +39,11 @@
     "webpack-dashboard": "^3.0.0",
     "webpack-dev-server": "^3.2.1",
     "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-redux": "^6.0.1",
+    "redux": "^4.0.1"
   }
 }
