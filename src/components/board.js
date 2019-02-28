@@ -146,6 +146,7 @@ class SnakeBoard extends React.Component{
         else{
             this.props.doMove(direction, snake, food)
         }
+        this.boardHolder.focus();
     }
 
     isOnTheSnake(nextPiece) {
