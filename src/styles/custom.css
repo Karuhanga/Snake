@@ -14,5 +14,14 @@
 }
 
 .hasSnake{
-    color: teal;
+    background: teal;
+}
+
+.food{
+    background: burlywood;
+}
+
+.boardHolder{
+    width: 100vw;
+    height: 100vh;
 }
