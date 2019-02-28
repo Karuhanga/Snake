@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
 .box{
     width: 20px;
     height: 20px;
@@ -11,10 +13,16 @@
     border-collapse: collapse;
     padding: 0;
     margin: 0;
+    align-self: center;
 }
 
 .hasSnake{
     background: teal;
+}
+
+body{
+    overflow: hidden;
+    font-family: "Nunito", sans-serif;;
 }
 
 .food{
@@ -24,4 +32,31 @@
 .boardHolder{
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+button{
+    width: 80px;
+    height: 40px;
+    align-self: center;
+    margin: 10px;
+    background: transparent;
+    box-shadow: none;
+    border: 1px solid;
+}
+
+.score{
+    width: 150px;
+    height: 40px;
+    align-self: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+h1{
+    text-align: center;
 }

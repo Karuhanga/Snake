@@ -54,6 +54,7 @@ class SnakeBoard extends React.Component{
 
     render() {
         return <div className={"boardHolder"} {...ArrowKeysReact.events} tabIndex="1" autoFocus ref={ref => this.boardHolder = ref}>
+                    <span className={"score"}>Score: {this.state.score}</span>
                     <table className={"board"}>
                         <tbody>
                         {this.props.board.map(row => <tr key={row[0].x}>{row.map(cell => <Cell key={cell.x.toString() + cell.y.toString()} dataCell={cell} isPartOfSnake={this.cellIsPartOfSnake(cell)} isFood={this.cellIsFood(cell)}/>)}</tr>)}
@@ -62,7 +63,6 @@ class SnakeBoard extends React.Component{
                     <button onClick={() => this.toggleGamePlay()}>
                         {this.getButtonText()}
                     </button>
-                    <span>Score: {this.state.score}</span>
                     <button disabled={!this.state.gameInProgress} onClick={() => this.faster()}>
                         Faster
                     </button>
@@ -157,8 +157,8 @@ class SnakeBoard extends React.Component{
         this.setState({
             speed: speed > 3000 ? 3000 : speed
         });
-        this.toggleGamePlay();
-        // this.toggleGamePlay();
+        clearInterval(heartBeat);
+        heartBeat = setInterval(() => this.move(this.props.direction, this.props.snake, this.props.food), this.state.speed);
     }
 
     faster() {
@@ -166,8 +166,8 @@ class SnakeBoard extends React.Component{
         this.setState({
             speed: speed < 100 ? 100 : speed
         });
-        this.toggleGamePlay();
-        // this.toggleGamePlay();
+        clearInterval(heartBeat);
+        heartBeat = setInterval(() => this.move(this.props.direction, this.props.snake, this.props.food), this.state.speed);
     }
 }
 

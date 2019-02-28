@@ -2,7 +2,7 @@ import getRandomInt, {buildNextPiece} from '../utils'
 import {combineReducers} from "redux";
 import {DIRECT, DOWN, FEED, GROW, LEFT, MOVE, RESET, RIGHT, UP} from "./actions";
 
-export const SIZE = 15;
+export const SIZE = 20;
 
 function buildInitialBoardState() {
     let initialBoardState = [];

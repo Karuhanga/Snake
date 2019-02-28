@@ -4,7 +4,10 @@ import SnakeBoard from './board'
 
 export default class App extends React.Component{
     render() {
-        return <SnakeBoard/>
+        return <div>
+                    <h1>Snake</h1>
+                    <SnakeBoard/>
+                </div>
     }
 }
 
